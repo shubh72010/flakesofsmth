@@ -1,3 +1,44 @@
+/* Responsive Layout */
+@media (max-width: 900px) {
+    main {
+        padding: 1rem 0.5rem 0 0.5rem;
+        border-radius: 16px;
+    }
+    .pricing-card.aesthetic, .contact-card.apetizing {
+        min-width: 90vw;
+        max-width: 98vw;
+        padding: 2rem 0.5rem;
+    }
+    .gallery.large {
+        gap: 1rem;
+    }
+    .apple-nav {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .gallery.large img {
+        max-width: 98vw;
+        border-radius: 12px;
+    }
+    .pricing-card.aesthetic, .contact-card.apetizing {
+        min-width: 98vw;
+        max-width: 99vw;
+        padding: 1.2rem 0.2rem;
+    }
+}
 /* Animations */
 .fade-in {
     opacity: 0;
