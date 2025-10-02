@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flakesofsmth Gallery</title>
+    <meta name="description" content="Gallery of flakesofsmth: Creative Advertisement, Poster & Digital Art Designs. Minimal, modern, and impactful.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin:0; padding:0; background:#fff; color:#111; }
+        header { background:#f8f8f8; padding:2rem 1rem; text-align:center; }
+        header h1 { margin:0; font-size:2.5rem; }
+        nav { margin-top:1rem; }
+        nav ul { list-style:none; padding:0; display:flex; justify-content:center; gap:2rem; }
+        nav a { text-decoration:none; color:#111; font-weight:500; }
+        main { padding:2rem 1rem; max-width:1200px; margin:auto; }
+        h2 { margin-top:2rem; font-size:2rem; text-align:center; }
+        .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; margin-top:1rem; }
+        .gallery img { width:100%; height:250px; object-fit:cover; border-radius:12px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery img:hover { transform:scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+        footer { text-align:center; padding:1.5rem; background:#f8f8f8; margin-top:2rem; font-size:0.9rem; color:#555; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>flakesofsmth Gallery</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#ads">Ads</a></li>
+                <li><a href="#posters">Posters</a></li>
+                <li><a href="#art">Digital Art</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="ads">
+            <h2>Advertisement Designs</h2>
+            <div class="gallery">
+                <img src="images/nothing_phone_3_ad.png" alt="Nothing Phone 3 Ad" loading="lazy">
+                <img src="images/nothing_phone_3_ad2.png" alt="Nothing Phone 2 Ad" loading="lazy">
+            </div>
+        </section>
+
+        <section id="posters">
+            <h2>Posters</h2>
+            <div class="gallery">
+                <img src="images/nothing_phone_2_poster.png" alt="Nothing Phone 2 Poster" loading="lazy">
+                <img src="images/nothing_phone_3_poster.png" alt="Nothing Phone 3 Poster" loading="lazy">
+            </div>
+        </section>
+
+        <section id="art">
+            <h2>Digital Art</h2>
+            <div class="gallery">
+                <img src="images/space_marine_wh40k.png" alt="Space Marine Warhammer 40K" loading="lazy">
+                <img src="images/max_verstappen.png" alt="Max Verstappen Digital Art" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 flakesofsmth. All rights reserved.
+    </footer>
+
+</body>
+</html>
