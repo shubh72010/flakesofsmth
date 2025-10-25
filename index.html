@@ -1,89 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixelated</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/tabicon.ico">
+    <title>Pixelated | Index</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const detailsBox = document.querySelector('.details-box');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', function () {
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Scrolling down
+                    detailsBox.classList.remove('slide-in-left');
+                    detailsBox.classList.add('slide-out-left');
+                } else if (currentScrollY < lastScrollY) {
+                    // Scrolling up
+                    detailsBox.classList.remove('slide-out-left');
+                    detailsBox.classList.add('slide-in-left');
+                }
+
+                lastScrollY = currentScrollY;
+            });
+        });
+    </script>
 </head>
+
 <body>
-    <header class="hero">
-        <nav class="apple-nav">
-            <span class="nav-logo">Pixelated</span>
+
+    <header>
+        <nav>
             <ul>
-                <li><a href="#ads">Ads</a></li>
-                <li><a href="#posters">Posters</a></li>
-                <li><a href="#art">Art</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="hero-content">
-            <h1 class="hero-title">Unleash Creativity</h1>
-            <p class="hero-desc">Minimal. Modern. Impactful.<br>Advertisement, Poster & Digital Art Designs</p>
-        </div>
+
+
     </header>
-    <!-- Navigation moved to header for Apple-like layout -->
+
     <main>
-        <section id="ads" class="showcase">
-            <h2>Advertisement Designs</h2>
-            <div class="gallery large">
-                <img src="images/nothing_phone_3_ad.png" alt="Nothing Phone 3 Ad" />
-                <img src="images/nothing_phone_3_ad2.png" alt="Nothing Phone 2 Ad" />
+        <h1 class="tracking-in-contract-bck">Pixelated</h1>
+        <div class="details-box slide-in-left">
+            <h2>Why do we exist?</h2>
+            <div class="content">
+                <p>We are here to edit your favourite photos with <span
+                        class="tracking-in-contract-bck accent-2">HUMAN</span> creativity and no AI creativity.</p>
             </div>
-        </section>
-        <section id="posters" class="showcase">
-            <h2>Posters</h2>
-            <div class="gallery large">
-                <img src="images/nothing_phone_2_poster.png" alt="Nothing Phone 2 Poster" />
-                <img src="images/nothing_phone_3_poster.png" alt="Nothing Phone 3 Poster" />
-            </div>
-        </section>
-        <section id="art" class="showcase">
-            <h2>Digital Art</h2>
-            <div class="gallery large">
-                <img src="images/space_marine_wh40k.png" alt="Space Marine Warhammer 40K" />
-                <img src="images/max_verstappen.png" alt="Max Verstappen Digital Art" />
-            </div>
-        </section>
-        <section id="pricing" class="pricing-section">
+        </div>
+        <div class="details-box slide-in-left">
             <h2>Pricing</h2>
-            <div class="pricing-card aesthetic fade-in">
-                <div class="pricing-icon">💸</div>
-                <p class="pricing-desc">Invest in your brand’s success with creative designs that stand out and connect. Our pricing is designed to be fair, simple, and focused on your growth.</p>
-                <ul class="pricing-list">
-                    <li><span class="price-highlight">$10</span> <span class="price-for">for <strong>2 custom designs</strong></span> <br><span class="price-types">(ads, posters, or digital art)</span></li>
-                    <li>Mix and match any type to fit your needs</li>
-                    <li>Bulk and custom packages available for ambitious projects</li>
-                </ul>
-                <p class="pricing-cta">Let’s make your vision a reality. <a href="#contact">Get in touch today!</a></p>
-                <p class="pricing-trust">Trusted by creators and brands for quality, reliability, and fast turnaround.</p>
+            <div class="content">
+                <p>Invest in your brand’s success with <span class="accent">CREATIVE</span> designs that stand out and
+                    connect.<br>
+                    Our pricing is
+                    designed to be <span class="accent">fair, simple, and focused on your growth.</span><br><br>
+
+                    <span class="accent-warm">$10 for 2 custom designs
+                        (ads, posters, or digital art)</span>
+                    Mix and match any type to fit your needs
+                    Bulk and custom packages available for ambitious projects
+                    Let’s make your vision a reality. Get in touch today!
+
+                    Trusted by creators and brands for quality, reliability, and fast turnaround.
+                </p>
             </div>
-        </section>
-        <section id="contact" class="contact-section">
-            <h2>Contact</h2>
-            <div class="contact-card apetizing fade-in">
-                <h3>Let's Create Something Amazing Together!</h3>
-                <p class="contact-desc">Whether you want a stunning ad, a bold poster, or unique digital art, We at Pixelated are ready to bring your ideas to life.<br>Reach out on your favorite platform:</p>
-                <div class="contact-links">
-                    <a href="mailto:flakesofsmth@gmail.com" class="contact-btn email" title="Email">
-                        <span class="icon">📧</span> Email, flakesofsmth@gmail.com
-                    </a>
-                    <a href="https://discord.com/users/flakesofsmth" class="contact-btn discord" target="_blank" title="Discord">
-                        <span class="icon">💬</span> Discord, @flakesofsmth
-                    </a>
-                    <a href="https://instagram.com/flakesofsmth" class="contact-btn insta" target="_blank" title="Instagram">
-                        <span class="icon">📸</span> Instagram, @flakesofsmth
-                    </a>
-                </div>
+        </div>
+        <div class="details-box slide-in-left">
+            <h2>Well then what are you waiting for?</h2>
+            <div class="content">
+                <p>Want some proof go to <a href="gallery.html" class="accent""><b>GALLERY</b></a>
+                <br>
+                Ready to get started? <a href="contact.html" class="accent-2"><b>CONTACT</b></a> us now!
+                </p>
             </div>
-        </section>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Pixelated. All rights reserved.</p>
-    </footer>
+
 </body>
+
 </html>
-
-
